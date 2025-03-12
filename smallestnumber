@@ -7,11 +7,6 @@ public class SmallestEightNumbers {
         System.out.println("Enter the number of elements:");
         int n = scanner.nextInt();
 
-        if (n < 8) {
-            System.out.println("Please enter at least 8 numbers.");
-            return;
-        }
-
         int[] numbers = new int[n];
 
         System.out.println("Enter the numbers:");
@@ -19,12 +14,10 @@ public class SmallestEightNumbers {
             numbers[i] = scanner.nextInt();
         }
 
-        findSmallestEight(numbers);
-
-        scanner.close();
+        findSmallest(numbers);
     }
 
-    public static void findSmallestEight(int[] arr) {
+    public static void findSmallest(int[] arr) {
         
         for (int i = 0; i < 8; i++) {
             int minIndex = i;
@@ -39,7 +32,7 @@ public class SmallestEightNumbers {
             arr[minIndex] = temp;
         }
 
-        System.out.println("Smallest 8 numbers:");
+        System.out.println("the Smallest 8 numbers are :");
         for (int i = 0; i < 8; i++) {
             System.out.print(arr[i] + " ");
         }

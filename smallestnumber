@@ -7,6 +7,11 @@ public class SmallestNumbers {
         System.out.println("Enter the number of elements:");
         int n = scanner.nextInt();
 
+        if (n < 8) {
+            System.out.println("Please enter at least 8 numbers.");
+            return;
+        }
+
         int[] numbers = new int[n];
 
         System.out.println("Enter the numbers:");
